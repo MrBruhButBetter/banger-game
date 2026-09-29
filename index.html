@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON DRIFT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-shell">
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="hud">
+            <div class="brand">
+                <span>NEON</span>
+                <strong>DRIFT</strong>
+            </div>
+
+            <div class="hud-stats">
+                <div class="stat">
+                    <span class="label">SCORE</span>
+                    <span id="score">000000</span>
+                </div>
+
+                <div class="stat">
+                    <span class="label">LAP</span>
+                    <span id="lap">1 / 3</span>
+                </div>
+
+                <div class="stat">
+                    <span class="label">SPEED</span>
+                    <span id="speed">0</span>
+                    <small>KM/H</small>
+                </div>
+            </div>
+
+            <div class="boost-wrap">
+                <div class="boost-label">
+                    <span>BOOST</span>
+                    <span id="boostPercent">100%</span>
+                </div>
+
+                <div class="boost-bar">
+                    <div id="boostFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="combo" id="combo">
+            <span id="comboText">DRIFT</span>
+            <strong id="comboValue">x1</strong>
+        </div>
+
+        <div class="message" id="message">
+            <span id="messageText">GET READY</span>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <div class="logo">
+                <div>NEON</div>
+                <strong>DRIFT</strong>
+            </div>
+
+            <p class="tagline">BURN RUBBER. CHASE THE LIGHTS.</p>
+
+            <button id="startButton">START RACE</button>
+
+            <div class="controls">
+                <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> DRIVE</span>
+                <span><kbd>SPACE</kbd> BOOST</span>
+                <span><kbd>R</kbd> RESTART</span>
+            </div>
+        </div>
+
+        <div class="finish-screen hidden" id="finishScreen">
+            <p class="finish-small">RACE COMPLETE</p>
+            <h1>NEON<br><span>CHAMPION</span></h1>
+
+            <div class="final-score">
+                <span>FINAL SCORE</span>
+                <strong id="finalScore">000000</strong>
+            </div>
+
+            <div class="finish-stats">
+                <div>
+                    <span>LAPS</span>
+                    <strong id="finalLaps">3</strong>
+                </div>
+
+                <div>
+                    <span>COINS</span>
+                    <strong id="finalCoins">0</strong>
+                </div>
+            </div>
+
+            <button id="restartButton">RACE AGAIN</button>
+        </div>
+
+        <div class="scanlines"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
